@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = 'localhost';
-    private $db_name = 'clean_earn_india';
-    private $username = 'root';
-    private $password = '';
+    private $host = '127.0.0.1:3306';
+    private $db_name = 'u348049742_clean_earn_ind';
+    private $username = 'u348049742_clean_earn_ind';
+    private $password = 'Clean_Earn_Ind@2025';
     private $conn;
 
     // Get database connection

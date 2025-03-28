@@ -1,4 +1,4 @@
-cleanandearn/
+caev0/
 │
 ├── includes/                 
 │   ├── dashboard_footer.php            
@@ -63,13 +63,4 @@ cleanandearn/
 ├── config.php
 ├── db.sql                    
 ├── README.md                 
-
-
-\\If you deploy to a production server, uncomment the HTTPS redirection rule in the .htaccess file  :
-
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-Also, Ensure mod_rewrite is enabled in your Apache configuration.
 

@@ -8,7 +8,8 @@ define('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,https://cleanearnindia.com
 
 // Error reporting
 error_reporting(E_ALL);
-ini_set('display_errors', 0); // Don't display errors in production
+// Don't display errors in production
+// ini_set('display_errors', 0); 
 
 // Set timezone
 date_default_timezone_set('Asia/Kolkata');
