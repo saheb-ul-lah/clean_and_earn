@@ -1,3 +1,4 @@
+```
 /api/
 ├── config/
 │   ├── database.php
@@ -31,7 +32,8 @@
 ├── .htaccess
 └── index.php
 
-
+```
+```
 # Navigate to api directory
 cd api
 
@@ -61,14 +63,7 @@ touch .htaccess index.php
 
 echo "✅ Folder structure and files created successfully!"
 
-
-
-
-
-
-
-
-
+```
 
 ### Clean and Earn India - Complete API Implementation
 
@@ -632,6 +627,38 @@ The API will be organized in the following directory structure:
 
 4. **Response**: Success message with transaction ID
 
+...
+
+5.  **Assign Collection to Collector** (Authenticated, Admin/Super Admin)
+    *   **URL**: `/api/admin/collections`
+    *   **Method**: `POST`
+    *   **Body**:
+        ```json
+        {
+          "listing_id": 15,  // ID of the waste listing to assign
+          "collector_id": 19 // ID of the collector user
+        }
+        ```
+    *   **Response (Success 201 Created)**:
+        ```json
+        {
+          "status": "success",
+          "data": {
+            "message": "Collection assigned successfully",
+            "collection_id": 13
+          }
+        }
+        ```
+    *   **Response (Error 422 Unprocessable Entity)**: If listing is not pending or collector is invalid.
+        ```json
+        {
+            "status": "error",
+            "error": {
+                "title": "Assignment Failed",
+                "message": "Unable to assign collection. Check if listing is pending and collector is valid."
+            }
+        }
+        ```
 
 
 
